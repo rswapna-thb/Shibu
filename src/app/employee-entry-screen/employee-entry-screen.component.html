@@ -1,0 +1,219 @@
+<div class="container-fluid">
+  <div class="col-10 grid margin strech-card">
+      <div class="card">
+          <div class="text-center">
+              <h2>EMPLOYEE ENTRY SCREEN</h2>
+          </div>
+          <form [formGroup]="employeeform" (ngSubmit)="onSubmit()" class="form-horizontal">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group text-right">
+                                  <label for="firstName">First Name</label>
+                                </div>
+                                <div class=" text-right">
+                                  <label for="lastName">Last Name</label>
+                                </div><br>
+                                <div class="form-group text-right">
+                                    <label>Gender</label>
+                                </div><br><br>
+                                <div class="form-group text-right">
+                                    <label>DOB</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <input type="text" id="firstName" class="form-control" formControlName="firstName" name="firstName">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="lastName" #lastName="ngModel" [(ngModel)]="model.lastName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <input type="radio" class="text-left" name="male">&nbsp;Male<br>
+                                        <input type="radio" class="text-left"name="female">&nbsp;Female
+                                    </div>
+                                    <div class="col-sm-7 text-left">
+                                          <label>MaritalStatus</label>&nbsp;
+                                        <input type="radio" name="male">&nbsp;Married<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="male">&nbsp;Single
+                                    </div>
+                                </div><br>
+                                <div>
+                                    <input type="date" class="form-control" name="date">
+                                </div>
+                            </div>
+                          </div><br>
+                          <div class="text-center">
+                              <div class="text-center">
+                                  <h4>Education</h4>
+                              </div>
+                          </div>
+                          
+                        <div>
+                            
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group text-right"><br><br>
+                                        <label>10th</label><br>
+                                        <label>12th</label><br>
+                                        <label>BE</label><br>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <div class="text-center">
+                                        <label>Year</label>
+                                    </div>
+                                      
+                                      <div>
+                                          <input type="text" class="form-control">
+                                      </div>
+                                      <div>
+                                          <input type="text" class="form-control">
+                                      </div>
+                                      <div>
+                                          <input type="text" class="form-control">
+                                      </div>
+                                      
+                                  </div>
+                                  <div class="col-sm-4">
+                                    <div class="text-center">
+                                        <label>Percentage</label>
+                                    </div>
+                                      
+                                      <div>
+                                          <input type="text" class="form-control">
+                                      </div>
+                                      <div>
+                                          <input type="text" class="form-control">
+                                      </div>
+                                      <div>
+                                          <input type="text" class="form-control">
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                            <div class="row">
+                              <div class="col-sm-5">
+                                <div class="form-group" class="text-right">
+                                  <label>Permanent address</label>
+                                </div><br>
+                                <div class="form-group" class="text-right"><br><br><br>
+                                  <label>Present address</label>
+                                </div>
+                                <div class="form-group" class="text-right"><br><br><br>
+                                  &nbsp;&nbsp;&nbsp;&nbsp; <label>Personal email address</label>
+                                </div><br>
+                                <div class="form-group" class="text-right">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;  <label>Mobile Number</label>
+                              </div><br>
+                              <div class="form-group" class="text-right"> 
+                                <label>Father Name</label>
+                              </div><br>
+                                <div class="text-right" class="text-right">
+                                    <label >PAN</label>
+                                </div><br>
+                                 
+                              
+                              <div class="form-group" class="text-right"> 
+                                  <label>Adhaar</label>
+                              </div><br>
+                              <div class="text-right">
+                                  <label>Passport</label>&nbsp;
+                                  <input type="radio" class="text-right" name="passport">&nbsp;yes<br>&nbsp;&nbsp;
+                                  &nbsp;&nbsp;<input type="radio" name="passport">&nbsp;No
+                              </div>
+                            </div>
+                            <div class="col-sm-7">
+                              <div class="form-group">
+                                  <textarea rows="3" cols="30" class="form-control" name="permanentaddress"></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <textarea rows="3" cols="30" class="form-control" name="presentaddress"></textarea>
+                              </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" name="Emailaddress">
+                                </div>
+                              
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="MobileNumber">
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="FatherName">
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="Pan">
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" name="Adhaar">
+                              </div><br>
+                              <div class="form-group" class="text-right">
+                                  <input type="text" class="form-control" name="passport" value="Passport Number">
+                                </div>
+                            </div>
+                        </div>
+                          </div>
+                      </div><br>
+                          <div class="form-group">
+                              <div class="row">
+                                  <div class="col-sm-6 text-right">
+                                    <button class="btn btn-success" (click)="onLoadDataClick()">Save</button>
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <button class="btn btn-success text-left">Cancel</button>
+                                  </div>
+                              </div>
+                            </div>
+              </div>
+            </form>
+      </div>
+      
+  </div>
+</div>
+
+
+              
+          <!--    &nbsp; <textarea rows="3" cols="30"></textarea>
+              <div>
+                <label>present address</label>
+                &nbsp;  <textarea rows="3" cols="30"></textarea>
+              </div>
+              <div>
+                <label>personal email address</label>&nbsp;
+                <input type="textarea" name="address">
+              </div>
+              <div>
+                <label>Mobile Number</label>&nbsp;
+                <input type="text" name="address">
+              </div>
+              <div>
+                <label>Father Name</label>&nbsp;
+                <input type="textarea" name="address">
+              </div>
+          <div>
+            <label>PAN</label>&nbsp;
+            <input type="text" name="pan">
+          </div>
+          <div>
+            <label>Adhaar</label>&nbsp;
+            <input type="text" name="adhaar">
+          </div>
+          <div>
+            <label>Passport</label>&nbsp;
+            <input type="radio" name="passport">yes<br>
+            <input type="radio" name="passport">No
+          </div>
+          <div>
+            <input type="text" name="passport" value="Passport Number">
+          </div>
+        </div>
+      </div>
+</div>-->
+
+
